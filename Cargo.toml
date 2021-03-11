@@ -1,0 +1,10 @@
+[package]
+name = "aoc-2016"
+version = "0.1.0"
+authors = ["Jonas Vander Vennet <jonas.vdv@hotmail.com>"]
+edition = "2018"
+
+[dependencies]
+structopt = "0.3.20"
+itertools = "0.9"
+regex = "1"
