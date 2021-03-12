@@ -3,6 +3,7 @@ use structopt::StructOpt;
 mod util;
 
 mod day01;
+mod day02;
 
 #[derive(StructOpt)]
 #[structopt(
@@ -24,7 +25,7 @@ fn print_day_header(day: usize) {
 
 fn main() {
     let args = Opt::from_args();
-    let mains = [day01::main];
+    let mains = [day01::main, day02::main];
 
     match args.day.as_str() {
         "all" => {
