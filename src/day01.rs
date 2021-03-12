@@ -4,8 +4,6 @@ use std::collections::HashSet;
 use std::fs::read_to_string;
 use std::time::Instant;
 
-// TODO: can probably solve this very cleanly using complex numbers and multiplying by +i or -i
-
 fn simplify_walked_dimensions(dist_per_direction: &Vec<isize>) -> (isize, isize) {
     // absolute value of travelled distance in 2 dimensions
     let vertical_distance = dist_per_direction[0] - dist_per_direction[2];
