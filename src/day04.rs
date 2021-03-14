@@ -29,7 +29,7 @@ fn solve(input: &str, part: usize) -> usize {
             count_vec.sort_by(|a, b| a.0.cmp(b.0)); // order alphabetically on characters
             count_vec.sort_by(|a, b| b.1.cmp(a.1)); // stable sort on key values
             let calculated_checksum: String = count_vec[..5].iter().map(|&(k, _)| k).collect();
-            
+
             if calculated_checksum == given_checksum {
                 valid_sector_ids += sector_id;
             }
@@ -50,7 +50,7 @@ fn solve(input: &str, part: usize) -> usize {
                 })
                 .collect();
             // println!("{} -> {}", sector_id, decrypted_name);
-            if decrypted_name == "northpole object storage"{
+            if decrypted_name == "northpole object storage" {
                 return sector_id;
             }
         }
