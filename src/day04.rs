@@ -4,7 +4,7 @@ use std::collections::HashMap;
 use std::fs::read_to_string;
 use std::time::Instant;
 
-fn verify_triangles(input: &str, part: usize) -> usize {
+fn solve(input: &str, part: usize) -> usize {
     // split capture into name/ sector ID/checksum
     let re: Regex = Regex::new(r"([\w-]+)-(\d+)\[(\w+)\]").unwrap();
 
@@ -63,14 +63,14 @@ pub fn main() {
     // PART 1
     let start = Instant::now();
     let known_answer = "245102";
-    let part_1: usize = verify_triangles(&input, 1);
+    let part_1: usize = solve(&input, 1);
     let duration = start.elapsed();
     print_part_1(&part_1.to_string(), &known_answer, duration);
 
     // PART 2
     let start = Instant::now();
     let known_answer = "324";
-    let part_2: usize = verify_triangles(&input, 2);
+    let part_2: usize = solve(&input, 2);
     let duration = start.elapsed();
     print_part_2(&part_2.to_string(), &known_answer, duration);
 }
@@ -82,35 +82,35 @@ mod tests {
     #[test]
     fn test_example_1() {
         let input = "aaaaa-bbb-z-y-x-123[abxyz]";
-        let answer: usize = verify_triangles(&input, 1);
+        let answer: usize = solve(&input, 1);
         assert_eq!(answer, 123);
     }
 
     #[test]
     fn test_example_2() {
         let input = "a-b-c-d-e-f-g-h-987[abcde]";
-        let answer: usize = verify_triangles(&input, 1);
+        let answer: usize = solve(&input, 1);
         assert_eq!(answer, 987);
     }
 
     #[test]
     fn test_example_3() {
         let input = "not-a-real-room-404[oarel]";
-        let answer: usize = verify_triangles(&input, 1);
+        let answer: usize = solve(&input, 1);
         assert_eq!(answer, 404);
     }
 
     #[test]
     fn test_example_4() {
         let input = "totally-real-room-200[decoy]";
-        let answer: usize = verify_triangles(&input, 1);
+        let answer: usize = solve(&input, 1);
         assert_eq!(answer, 0);
     }
 
     #[test]
     fn test_example_2_1() {
         let input = "qzmt-zixmtkozy-ivhz-343[dummy]";
-        let answer: usize = verify_triangles(&input, 2);
+        let answer: usize = solve(&input, 2);
         assert_eq!(answer, 0);
     }
 }
