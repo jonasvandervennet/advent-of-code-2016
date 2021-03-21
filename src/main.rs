@@ -11,6 +11,7 @@ mod day06;
 mod day07;
 mod day08;
 mod day09;
+mod day10;
 mod day12;
 
 #[derive(StructOpt)]
@@ -43,6 +44,7 @@ fn main() {
         day07::main,
         day08::main,
         day09::main,
+        day10::main,
         day12::main,
     ];
 
