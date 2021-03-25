@@ -9,3 +9,4 @@ structopt = "0.3.20"
 itertools = "0.9"
 regex = "1"
 md-5 = "0.9.1"
+fancy-regex = "0.4.1"  # needed backreferences for day 14
