@@ -54,7 +54,6 @@ fn time_button_press(input: &str, part: usize) -> usize {
 
 pub fn main() {
     let input = read_to_string("inputs/day15.txt").expect("Input not found..");
-    // let input = "Disc #1 has 5 positions; at time=0, it is at position 4.\nDisc #2 has 2 positions; at time=0, it is at position 1.";
 
     // PART 1
     let start = Instant::now();
