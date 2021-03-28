@@ -19,6 +19,7 @@ mod day15;
 mod day16;
 mod day18;
 mod day19;
+mod day21;
 
 #[derive(StructOpt)]
 #[structopt(
@@ -58,6 +59,7 @@ fn main() {
         day16::main,
         day18::main,
         day19::main,
+        day21::main,
     ];
 
     match args.day.as_str() {
